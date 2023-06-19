@@ -36,7 +36,7 @@ Comandos Git
 
 6-Git Checkout -b : Cria uma nova branch.
 
-7-Git Commit -m : informar mensagem.
+7-Git Commit -m :envia arquivo selecionado com git add para github.
 
 8-Git Push : enviar arquivos para repositório remoto.
 9-Git Branch -D <branchname> : Excluir uma branch.
@@ -45,3 +45,13 @@ Comandos Git
 
 11-Git Pull : Sincronizar/atualizar todo o conteúdo feito.
 
+SSH - GitBash
+Verificar se existe chave : ssh.ls -al ~/.ssh
+Adicionar uma nova chave. : (ID)ssh-keygen -t ed25519 -C "your_email@example.com"
+Inicializar agente-ssh.eval : "$(ssh-agent -s)"
+Adicionar chave ssh ao agente : .ssh-add ~/.ssh/id_ed25519
+
+SSH - GitBash
+Copiar chave ssh : .clip < ~/.ssh/id_ed25519.pub
+Adicionar chave no github : Github -> Settings -> SSH and GPG keys -> New SSH key -> Colar*Coloque um título que identifique. a chave*
+Testar conexão : ssh -T git@github.com ->digite : yes
